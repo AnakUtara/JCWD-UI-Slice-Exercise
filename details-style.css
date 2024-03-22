@@ -1,0 +1,328 @@
+:root {
+	--breadcrumbs-fs: 10px;
+	--black-text: rgb(0 47 52);
+	--desc-text: rgb(64, 99, 103);
+	--border-color: rgba(14, 4, 5, 0.2);
+	--std-fs: 14px;
+}
+
+html {
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	background-color: #f1f4f5;
+	margin: 0;
+}
+
+p {
+	font-size: var(--std-fs);
+	color: var(--desc-text);
+	margin: 0;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 20;
+	font-size: 20px;
+}
+
+.custom-icon {
+	font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
+	font-size: 30px;
+}
+
+/* breadcrumbs */
+
+#breadcrumbs {
+	padding: 10px;
+}
+
+#breadcrumbs > ol {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	font-size: var(--breadcrumbs-fs);
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#breadcrumbs > ol > li {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+#breadcrumbs a {
+	color: #7f9799;
+	text-decoration: none;
+}
+
+/* card */
+
+.card,
+.desc-card {
+	background-color: white;
+	border-radius: 8px;
+	overflow: hidden;
+	margin: 5px 0;
+}
+
+.desc-card {
+	padding: 20px;
+	border: 0.5px solid var(--border-color);
+}
+
+/* carousel */
+
+figure {
+	margin: 0;
+}
+
+.card > figure > img {
+	width: 100%;
+	aspect-ratio: 2/1;
+	object-fit: cover;
+}
+
+.card > figure {
+	display: grid;
+	place-items: center;
+	padding: 10px 0;
+	background-color: black;
+	position: relative;
+}
+
+.highlight {
+	padding: 3px 5px;
+	display: flex;
+	align-items: center;
+	background-color: #ffce32;
+	position: absolute;
+	left: 0;
+	top: 20px;
+}
+
+.highlight p {
+	color: var(--black-text);
+	font-size: var(--breadcrumbs-fs);
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.5pt;
+	padding: 0 3px;
+}
+
+.highlight span {
+	font-size: 14px;
+	padding: 0 3px;
+}
+
+/* price-info */
+
+.price-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.price-info h2 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.like-share {
+	display: flex;
+	align-items: center;
+}
+
+.like-share span:last-child {
+	margin-left: 5px;
+}
+
+article.title {
+	margin-bottom: 16px;
+}
+
+article.title p {
+	font-size: var(--std-fs);
+	padding: 5px 0;
+}
+
+hr {
+	border: 0.5px solid var(--border-color);
+}
+
+.location-date {
+	font-size: 12px;
+	color: var(--desc-text);
+	display: flex;
+	justify-content: space-between;
+}
+
+/* banner */
+
+.banner {
+	padding: 0 10px;
+}
+
+.banner img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+/* details */
+.desc-card > h2 {
+	margin: 0 0 15px 0;
+}
+
+.spec {
+	display: flex;
+	margin-bottom: 15px;
+}
+
+.spec p {
+	width: 50%;
+}
+
+.spec p,
+.spec li {
+	font-size: var(--std-fs);
+	margin: 0;
+	list-style: none;
+	color: var(--desc-text);
+}
+
+.spec p:nth-child(even) {
+	color: var(--black-text);
+}
+
+.spec-list {
+	margin: 0;
+	padding: 0;
+}
+
+.spec-list li {
+	color: var(--black-text);
+	margin-bottom: 10px;
+}
+
+.detail .spec:last-child {
+	margin-bottom: 0;
+}
+
+/* item-desc */
+
+.item-desc > p {
+	line-height: 20px;
+}
+
+.space {
+	height: 20px;
+}
+
+/* avatar */
+
+.avatar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+}
+
+.cred img {
+	aspect-ratio: 1;
+	border-radius: 50%;
+	height: 68px;
+	margin-right: 20px;
+}
+
+.cred {
+	display: flex;
+	align-items: center;
+}
+
+.big-icon {
+	font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 20;
+	font-size: 40px;
+}
+
+.location {
+	width: 100%;
+}
+
+/* lapor iklan */
+
+.desc-card h5 {
+	margin: 0;
+}
+
+.desc-card a {
+	color: var(--black-text);
+	text-decoration: none;
+}
+
+.report {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* footer */
+
+#copyright {
+	width: 100%;
+	background-color: #012f34;
+	display: grid;
+	place-items: center;
+	height: 90px;
+	z-index: 2;
+}
+
+#copyright p {
+	color: white;
+}
+
+#contact {
+	width: 100%;
+	position: fixed;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-around;
+	bottom: 0;
+	background-color: white;
+	z-index: 0;
+}
+
+#contact > button {
+	border: none;
+	background-color: #012f34;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+	width: 216px;
+	padding: 16px;
+	font-size: 16px;
+}
+
+#contact > button:last-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* z-index */
+
+#contact {
+	z-index: 1;
+}
+
+main {
+	position: relative;
+	z-index: 0;
+}
+
+footer {
+	position: relative;
+	z-index: 2;
+}
