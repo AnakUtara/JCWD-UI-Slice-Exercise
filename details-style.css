@@ -1,9 +1,11 @@
 :root {
 	--breadcrumbs-fs: 10px;
+	--breadcrumbs-fs-desktop: 12px;
 	--black-text: rgb(0 47 52);
 	--desc-text: rgb(64, 99, 103);
 	--border-color: rgba(14, 4, 5, 0.2);
 	--std-fs: 14px;
+	--desktop-fs: 16px;
 }
 
 html {
@@ -31,6 +33,12 @@ p {
 	font-size: 30px;
 }
 
+.next {
+	font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 20;
+	font-size: 24px;
+	color: #002f34;
+}
+
 /* breadcrumbs */
 
 #breadcrumbs {
@@ -41,7 +49,7 @@ p {
 	list-style: none;
 	display: flex;
 	align-items: center;
-	font-size: var(--breadcrumbs-fs);
+	font-size: var(--breadcrumbs-fs-desktop);
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -59,6 +67,17 @@ p {
 	text-decoration: none;
 }
 
+/* desktop banner */
+
+.banner-desktop {
+	padding-bottom: 5px;
+}
+
+.banner-desktop > img {
+	width: 100%;
+	border-radius: 5px;
+}
+
 /* card */
 
 .card,
@@ -70,8 +89,13 @@ p {
 }
 
 .desc-card {
-	padding: 20px;
+	padding: 16px;
 	border: 0.5px solid var(--border-color);
+}
+
+.desc-card > h4 {
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 
 /* carousel */
@@ -83,7 +107,7 @@ figure {
 .card > figure > img {
 	width: 100%;
 	aspect-ratio: 2/1;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .card > figure {
@@ -117,6 +141,20 @@ figure {
 	padding: 0 3px;
 }
 
+.thumbnails {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.thumbnails img {
+	aspect-ratio: 1;
+	object-fit: cover;
+	width: 60px;
+	height: 60px;
+	border: 2px solid var(--border-color);
+	margin-right: 5px;
+}
+
 /* price-info */
 
 .price-info {
@@ -127,7 +165,7 @@ figure {
 
 .price-info h2 {
 	margin: 0;
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: 500;
 }
 
@@ -163,6 +201,7 @@ hr {
 /* banner */
 
 .banner {
+	display: none;
 	padding: 0 10px;
 }
 
@@ -172,8 +211,28 @@ hr {
 }
 
 /* details */
+
+.desc-container {
+	display: flex;
+}
+
+.col-1 > .desc-card:first-child {
+	margin-top: 0;
+}
+
+.col-1 {
+	width: 65%;
+	padding-right: 2.5px;
+}
+
+.col-2 {
+	width: 35%;
+	padding-left: 2.5px;
+}
+
 .desc-card > h2 {
 	margin: 0 0 15px 0;
+	font-size: 20px;
 }
 
 .spec {
@@ -230,11 +289,16 @@ hr {
 	background-color: white;
 }
 
+.avatar h3 {
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+}
+
 .cred img {
 	aspect-ratio: 1;
 	border-radius: 50%;
 	height: 68px;
-	margin-right: 20px;
+	margin-right: 12px;
 }
 
 .cred {
@@ -243,8 +307,8 @@ hr {
 }
 
 .big-icon {
-	font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 20;
-	font-size: 40px;
+	font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 20;
+	font-size: 30px;
 }
 
 .location {
@@ -270,6 +334,69 @@ hr {
 
 /* footer */
 
+#footer {
+	background-color: rgb(235 238 239);
+	display: flex;
+}
+
+#footer > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 24px;
+}
+
+#footer div h2 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.socials {
+	display: block !important;
+}
+
+.socmed h2 {
+	font-weight: bold !important;
+	margin-bottom: 5px !important;
+	text-transform: uppercase;
+	margin-left: 5px !important;
+}
+
+.socmed {
+	margin-bottom: 15px;
+}
+
+.downloads {
+	display: flex;
+	justify-content: center;
+}
+
+.downloads > img {
+	width: 94px;
+}
+
+.socmed-icons > img,
+.downloads > img {
+	cursor: pointer;
+}
+
+.expand {
+	font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 20;
+	font-size: 36px;
+}
+
+.socmed-icons {
+	display: flex;
+}
+
+.socmed-icons > img {
+	aspect-ratio: 1;
+	width: 20px;
+	opacity: 0.5;
+	margin-right: 5px;
+}
+
 #copyright {
 	width: 100%;
 	background-color: #012f34;
@@ -281,17 +408,14 @@ hr {
 
 #copyright p {
 	color: white;
+	font-size: 12px;
 }
 
 #contact {
-	width: 100%;
-	position: fixed;
-	padding: 10px 0;
 	display: flex;
 	justify-content: space-around;
-	bottom: 0;
 	background-color: white;
-	z-index: 0;
+	padding: 10px;
 }
 
 #contact > button {
@@ -320,9 +444,88 @@ hr {
 main {
 	position: relative;
 	z-index: 0;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 footer {
 	position: relative;
 	z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+	.banner {
+		display: block;
+	}
+
+	.banner-desktop,
+	.thumbnails,
+	.images-heading {
+		display: none;
+	}
+
+	.desc-container {
+		display: block;
+	}
+
+	.col-1,
+	.col-2 {
+		width: 100%;
+		padding: 0;
+	}
+
+	#breadcrumbs > ol {
+		font-size: var(--breadcrumbs-fs);
+	}
+
+	.next {
+		font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 20;
+		font-size: 20px;
+	}
+
+	/* footer on small screen */
+
+	#footer {
+		display: block;
+		border: none;
+		background-color: white;
+	}
+
+	#footer > div,
+	.socmed,
+	.downloads {
+		border-top: 1px solid var(--border-color);
+	}
+
+	.socials {
+		border-top: none !important;
+		padding: 0 !important;
+	}
+
+	.socmed {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 0;
+	}
+
+	.socmed > h2 {
+		font-weight: 300 !important;
+		margin-bottom: 0 !important;
+		text-transform: none;
+		margin-left: 0 !important;
+	}
+
+	.socmed,
+	.downloads {
+		padding: 16px 24px;
+	}
+
+	#contact {
+		width: 100%;
+		position: fixed;
+		padding: 10px 0;
+		bottom: 0;
+		box-shadow: 1px 4px 0 rgba(0, 0, 0, 0.1);
+	}
 }
