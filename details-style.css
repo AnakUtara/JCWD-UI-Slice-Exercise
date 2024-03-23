@@ -425,15 +425,17 @@ footer {
 }
 
 #copyright {
-	width: 100%;
 	background-color: #012f34;
-	display: grid;
-	place-items: center;
-	height: 90px;
-	z-index: 2;
+	height: 58px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
 }
 
-#copyright p {
+#copyright p,
+a {
+	text-decoration: none;
 	color: white;
 	font-size: 12px;
 }
@@ -549,6 +551,17 @@ footer {
 
 	.downloads {
 		justify-content: center !important;
+	}
+
+	#copyright {
+		align-items: center;
+		height: 90px;
+		padding: 0;
+		justify-content: center;
+	}
+
+	#copyright > a {
+		display: none;
 	}
 
 	#contact {
