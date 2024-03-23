@@ -351,58 +351,66 @@ hr {
 }
 
 /* footer */
+footer {
+	margin-top: 40px;
+}
 
-#footer {
+#footer-wrapper {
 	background-color: rgb(235 238 239);
+	padding: 16px 16px 32px;
+}
+
+#m-footer-menu {
+	display: none;
+}
+
+#d-footer-menu {
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 40px;
 }
 
-#footer > div {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 16px 24px;
+#d-footer-menu > div,
+#d-footer-menu > div > a {
+	display: block;
 }
 
-#footer div h2 {
-	margin: 0;
-	font-size: 16px;
-	font-weight: 300;
-}
-
-.socials {
-	display: block !important;
-}
-
-.socmed h2 {
-	font-weight: bold !important;
-	margin-bottom: 5px !important;
+#d-footer-menu h2 {
+	margin: 0 0 15px 0;
+	font-size: var(--std-fs);
 	text-transform: uppercase;
+}
+
+#d-footer-menu a {
+	text-decoration: none;
+	color: #7f9799;
+	font-size: 12px;
+	margin-bottom: 8px;
+}
+
+.d-socials {
+	display: flex !important;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.d-socials > h2 {
 	margin-left: 5px !important;
+	margin-bottom: 0 !important;
 }
 
-.socmed {
-	margin-bottom: 15px;
-}
-
-.downloads {
-	display: flex;
-	justify-content: center;
-}
-
-.downloads > img {
+.badge {
 	width: 94px;
 }
 
 .socmed-icons > img,
-.downloads > img {
+.badge {
 	cursor: pointer;
 }
 
 .expand {
 	font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 20;
-	font-size: 36px;
+	font-size: 32px;
 }
 
 .socmed-icons {
@@ -512,40 +520,35 @@ footer {
 
 	/* footer on small screen */
 
-	#footer {
+	#d-footer-menu {
+		display: none;
+	}
+
+	#footer-wrapper {
+		padding: 0;
+	}
+
+	#m-footer-menu {
 		display: block;
-		border: none;
 		background-color: white;
 	}
 
-	#footer > div,
-	.socmed,
-	.downloads {
-		border-top: 1px solid var(--border-color);
+	#m-footer-menu h2 {
+		font-size: var(--desktop-fs);
+		font-weight: 300;
+		margin: 0;
 	}
 
-	.socials {
-		border-top: none !important;
-		padding: 0 !important;
-	}
-
-	.socmed {
+	#m-footer-menu > div {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 0;
-	}
-
-	.socmed > h2 {
-		font-weight: 300 !important;
-		margin-bottom: 0 !important;
-		text-transform: none;
-		margin-left: 0 !important;
-	}
-
-	.socmed,
-	.downloads {
 		padding: 16px 24px;
+		border-top: 1px solid var(--border-color);
+	}
+
+	.downloads {
+		justify-content: center !important;
 	}
 
 	#contact {
