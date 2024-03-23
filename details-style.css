@@ -120,7 +120,7 @@ figure {
 
 .card > figure > img {
 	width: 100%;
-	aspect-ratio: 2/1;
+	aspect-ratio: 16/9;
 	object-fit: contain;
 }
 
@@ -157,7 +157,6 @@ figure {
 
 .thumbnails {
 	display: flex;
-	margin-bottom: 10px;
 }
 
 .thumbnails img {
@@ -167,6 +166,7 @@ figure {
 	height: 60px;
 	border: 2px solid var(--border-color);
 	margin-right: 5px;
+	border-radius: 5px;
 }
 
 /* price-info */
@@ -305,6 +305,7 @@ hr {
 	justify-content: space-between;
 	align-items: center;
 	background-color: white;
+	padding: 10px 10px 5px 10px;
 }
 
 .avatar h3 {
@@ -351,6 +352,7 @@ hr {
 }
 
 /* footer */
+
 footer {
 	margin-top: 40px;
 }
@@ -442,9 +444,9 @@ a {
 
 #contact {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	background-color: white;
-	padding: 10px;
+	padding: 5px 10px 10px 10px;
 }
 
 #contact > button {
@@ -491,13 +493,16 @@ footer {
 		font-size: var(--breadcrumbs-fs);
 	}
 
+	.card > figure > img {
+		aspect-ratio: 2/1;
+	}
+
 	.banner {
 		display: block;
 	}
 
 	.banner-desktop,
-	.thumbnails,
-	.images-heading {
+	.gallery {
 		display: none;
 	}
 
@@ -570,5 +575,6 @@ footer {
 		padding: 10px 0;
 		bottom: 0;
 		box-shadow: 1px 4px 0 rgba(0, 0, 0, 0.1);
+		justify-content: space-around;
 	}
 }
