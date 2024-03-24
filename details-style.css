@@ -93,7 +93,7 @@ button {
 .card,
 .desc-card {
 	background-color: white;
-	border-radius: 8px;
+	border-radius: 5px;
 	overflow: hidden;
 }
 
@@ -104,7 +104,7 @@ button {
 .desc-card {
 	padding: 16px;
 	border: 0.5px solid var(--border-color);
-	margin: 5px 0;
+	margin-bottom: 5px;
 }
 
 .desc-card > h4 {
@@ -175,6 +175,7 @@ figure {
 	display: flex;
 	justify-content: space-between;
 	align-items: end;
+	margin-bottom: 5px;
 }
 
 .price-info h2 {
@@ -203,7 +204,7 @@ article.title p {
 
 hr {
 	border: 0.5px solid var(--border-color);
-	margin: 10px 0;
+	margin: 20px 0;
 }
 
 .location-date {
@@ -232,10 +233,6 @@ hr {
 
 .desc-container {
 	display: flex;
-}
-
-.col-1 > .desc-card:first-child {
-	margin-top: 0;
 }
 
 .col-1 {
@@ -298,6 +295,12 @@ hr {
 	height: 20px;
 }
 
+/* desc-mobile display */
+.m-title,
+.m-spec {
+	display: none;
+}
+
 /* avatar */
 
 .avatar {
@@ -305,7 +308,6 @@ hr {
 	justify-content: space-between;
 	align-items: center;
 	background-color: white;
-	padding: 10px 10px 5px 10px;
 }
 
 .avatar h3 {
@@ -443,27 +445,7 @@ a {
 }
 
 #contact {
-	display: flex;
-	justify-content: space-between;
-	background-color: white;
-	padding: 5px 10px 10px 10px;
-}
-
-#contact > button {
-	border: none;
-	background-color: #012f34;
-	color: white;
-	font-weight: bold;
-	border-radius: 5px;
-	width: 45%;
-	padding: 16px;
-	font-size: 16px;
-}
-
-#contact > button:last-child {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: none;
 }
 
 /* z-index */
@@ -525,6 +507,17 @@ footer {
 		font-size: 20px;
 	}
 
+	/* desc-visibility */
+	.d-spec,
+	.d-title {
+		display: none;
+	}
+
+	.m-spec,
+	.m-title {
+		display: block;
+	}
+
 	/* footer on small screen */
 
 	#d-footer-menu {
@@ -569,12 +562,31 @@ footer {
 		display: none;
 	}
 
+	#contact > button {
+		border: none;
+		background-color: #012f34;
+		color: white;
+		font-weight: bold;
+		border-radius: 5px;
+		width: 45%;
+		padding: 16px;
+		font-size: 16px;
+	}
+
+	#contact > button:last-child {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	#contact {
+		display: flex;
+		justify-content: space-evenly;
 		width: 100%;
 		position: fixed;
 		padding: 10px 0;
 		bottom: 0;
-		box-shadow: 1px 4px 0 rgba(0, 0, 0, 0.1);
-		justify-content: space-around;
+		background-color: white;
+		box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 	}
 }
