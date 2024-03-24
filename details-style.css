@@ -33,8 +33,24 @@ button {
 }
 
 .custom-icon {
-	font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
-	font-size: 30px;
+	font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
+	font-size: 24px;
+}
+
+.share,
+.like {
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.5s;
+}
+
+.share {
+	border-radius: 50%;
+	padding: 5px;
+}
+
+.share:hover {
+	background-color: rgb(185, 255, 255);
 }
 
 .next {
@@ -174,23 +190,20 @@ figure {
 .price-info {
 	display: flex;
 	justify-content: space-between;
-	align-items: end;
+	flex-wrap: wrap;
+	align-items: center;
 	margin-bottom: 5px;
 }
 
 .price-info h2 {
 	margin: 0;
-	font-size: 24px;
+	font-size: clamp(20px, 3vw, 34px);
 	font-weight: 500;
 }
 
 .like-share {
 	display: flex;
 	align-items: center;
-}
-
-.like-share span:last-child {
-	margin-left: 5px;
 }
 
 article.title {
@@ -212,9 +225,13 @@ hr {
 	justify-content: space-between;
 }
 
-.location-date > p {
+.loc-details {
 	font-size: 12px !important;
 	font-weight: 300;
+}
+
+.d-loc {
+	margin-bottom: 10px;
 }
 
 /* banner */
@@ -313,6 +330,7 @@ hr {
 .avatar h3 {
 	text-overflow: ellipsis;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .cred img {
@@ -320,6 +338,7 @@ hr {
 	border-radius: 50%;
 	height: 68px;
 	margin-right: 12px;
+	cursor: pointer;
 }
 
 .cred {
@@ -330,6 +349,54 @@ hr {
 .big-icon {
 	font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 20;
 	font-size: 30px;
+	cursor: pointer;
+}
+
+.d-contact {
+	display: block;
+}
+
+.d-contact > button {
+	width: 100%;
+	background-color: transparent;
+	border: 2px solid var(--black-text);
+	padding: 12px 0;
+	font-weight: bold;
+	font-size: var(--desktop-fs);
+	border-radius: 5px;
+	margin: 15px 0 10px 0;
+}
+
+.d-contact > button:hover {
+	border: 5px solid var(--black-text);
+	padding: 9px 0;
+}
+
+.show-number {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.show-number > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.show-number span {
+	font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 0, "opsz" 20;
+	font-size: 24px;
+	margin-right: 5px;
+}
+
+.show-number h3 {
+	margin: 0;
+}
+
+.show-number a {
+	text-decoration: underline !important;
 }
 
 .location {
@@ -509,7 +576,9 @@ footer {
 
 	/* desc-visibility */
 	.d-spec,
-	.d-title {
+	.d-title,
+	.d-contact,
+	.d-loc {
 		display: none;
 	}
 
